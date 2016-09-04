@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8U3-Fk-rtq">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Yummy Desserts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_Yummy_Desserts" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,216 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="107" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mvR-DZ-A63">
+                                <rect key="frame" x="0.0" y="15" width="600" height="585"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCellMain" rowHeight="107" id="xZm-ih-2as" customClass="customCellMain" customModule="iOS_Yummy_Desserts" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="107"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xZm-ih-2as" id="CFb-3x-NaD">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="106"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1dX-a2-KJb">
+                                                    <rect key="frame" x="8" y="8" width="584" height="90"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFn-Oz-1RM">
+                                                    <rect key="frame" x="24" y="42" width="553" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="ox7-WM-5Mu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="28"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1dX-a2-KJb" firstAttribute="trailing" secondItem="CFb-3x-NaD" secondAttribute="trailingMargin" id="5EU-2E-I1r"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oFn-Oz-1RM" secondAttribute="trailing" constant="15" id="OVZ-Jb-gq2"/>
+                                                <constraint firstItem="oFn-Oz-1RM" firstAttribute="top" secondItem="CFb-3x-NaD" secondAttribute="topMargin" constant="34" id="POp-sc-g4u"/>
+                                                <constraint firstItem="1dX-a2-KJb" firstAttribute="leading" secondItem="CFb-3x-NaD" secondAttribute="leadingMargin" id="bo7-mf-1Vt"/>
+                                                <constraint firstItem="1dX-a2-KJb" firstAttribute="top" secondItem="CFb-3x-NaD" secondAttribute="topMargin" id="gIe-4W-ykb"/>
+                                                <constraint firstItem="1dX-a2-KJb" firstAttribute="bottom" secondItem="CFb-3x-NaD" secondAttribute="bottomMargin" id="j4x-UV-87I"/>
+                                                <constraint firstItem="oFn-Oz-1RM" firstAttribute="leading" secondItem="CFb-3x-NaD" secondAttribute="leadingMargin" constant="16" id="vOK-3Z-lqB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="oFn-Oz-1RM" secondAttribute="bottom" constant="22" id="wgO-Ut-0rA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mainImg" destination="1dX-a2-KJb" id="GdD-Z1-5Aq"/>
+                                            <outlet property="mainLbl" destination="oFn-Oz-1RM" id="NXb-GF-3dD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mvR-DZ-A63" secondAttribute="bottom" id="CVZ-dJ-QT0"/>
+                            <constraint firstItem="mvR-DZ-A63" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KzS-1t-E0Z"/>
+                            <constraint firstAttribute="trailing" secondItem="mvR-DZ-A63" secondAttribute="trailing" id="X0J-eG-GCK"/>
+                            <constraint firstItem="mvR-DZ-A63" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="15" id="Zzq-aw-aEV"/>
+                            <constraint firstItem="mvR-DZ-A63" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="dl7-er-gYk"/>
+                            <constraint firstItem="mvR-DZ-A63" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="heS-7a-vcE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KzS-1t-E0Z"/>
+                                <exclude reference="dl7-er-gYk"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Yummy Desserts" id="MNO-pN-Sdp">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="FR4-g7-spy">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="jOF-4g-Zl5" kind="show" id="VGo-3p-Mro"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="mvR-DZ-A63" id="tqh-7e-Hrp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="881" y="-391"/>
+        </scene>
+        <!--Create Yummy DessertsVC-->
+        <scene sceneID="KOo-TN-lPO">
+            <objects>
+                <viewController id="jOF-4g-Zl5" customClass="CreateYummyDessertsVC" customModule="iOS_Yummy_Desserts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kHN-46-ycN"/>
+                        <viewControllerLayoutGuide type="bottom" id="r7s-Fv-LYu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x0B-7S-OpP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="deT-R0-vkv">
+                                <rect key="frame" x="20" y="93" width="560" height="140"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Favorite Dessert" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Abu-5k-2Z3" customClass="customTextFields" customModule="iOS_Yummy_Desserts" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="0.2036658653846154" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="560" id="JtI-Fg-RAH"/>
+                                            <constraint firstAttribute="height" constant="30" id="aeX-im-LbP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where to buy ?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZvX-l5-8Fj" customClass="customTextFields" customModule="iOS_Yummy_Desserts" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55" width="560" height="30"/>
+                                        <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="560" id="7J4-kz-z9s"/>
+                                            <constraint firstAttribute="height" constant="30" id="V4Q-S4-2T9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Review your favorite desserts" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eu2-yO-ylO" customClass="customTextFields" customModule="iOS_Yummy_Desserts" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="110" width="560" height="30"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="8Nm-Nn-64X"/>
+                                            <constraint firstAttribute="width" constant="560" id="txt-m3-6VN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cT5-lr-1fA">
+                                <rect key="frame" x="180" y="264" width="240" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="dl8-wU-9H3"/>
+                                    <constraint firstAttribute="width" constant="240" id="hnD-6J-CSg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2l-Sq-7T1">
+                                <rect key="frame" x="180" y="264" width="240" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Jvc-TZ-fTR"/>
+                                    <constraint firstAttribute="width" constant="240" id="fhi-1o-2I3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="19"/>
+                                <state key="normal" title="+ Add Yummy Photo">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addYummyImage:" destination="jOF-4g-Zl5" eventType="touchUpInside" id="cpS-cW-gEO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJN-kX-DOk" customClass="customButton" customModule="iOS_Yummy_Desserts" customModuleProvider="target">
+                                <rect key="frame" x="180" y="473" width="240" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="0.60414663461538465" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mfK-j0-0SI"/>
+                                    <constraint firstAttribute="width" constant="240" id="tfY-Fj-1dQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Create Yum Dessert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCreateYummyDesserts:" destination="jOF-4g-Zl5" eventType="touchUpInside" id="mbk-JN-Bhq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cT5-lr-1fA" firstAttribute="centerX" secondItem="x0B-7S-OpP" secondAttribute="centerX" id="63w-fc-XZq"/>
+                            <constraint firstItem="deT-R0-vkv" firstAttribute="leading" secondItem="x0B-7S-OpP" secondAttribute="leadingMargin" id="IJg-UE-3JY"/>
+                            <constraint firstItem="n2l-Sq-7T1" firstAttribute="width" secondItem="cT5-lr-1fA" secondAttribute="width" id="Lmc-hN-Ora"/>
+                            <constraint firstItem="deT-R0-vkv" firstAttribute="top" secondItem="kHN-46-ycN" secondAttribute="bottom" constant="29" id="MYw-po-968"/>
+                            <constraint firstItem="deT-R0-vkv" firstAttribute="trailing" secondItem="x0B-7S-OpP" secondAttribute="trailingMargin" id="RJ5-wJ-4ha"/>
+                            <constraint firstItem="n2l-Sq-7T1" firstAttribute="height" secondItem="cT5-lr-1fA" secondAttribute="height" id="RtB-qW-SQX"/>
+                            <constraint firstItem="cT5-lr-1fA" firstAttribute="top" secondItem="deT-R0-vkv" secondAttribute="bottom" constant="31" id="bUO-0i-SvH"/>
+                            <constraint firstItem="r7s-Fv-LYu" firstAttribute="top" secondItem="OJN-kX-DOk" secondAttribute="bottom" constant="97" id="hqI-pS-R4Y"/>
+                            <constraint firstItem="n2l-Sq-7T1" firstAttribute="top" secondItem="deT-R0-vkv" secondAttribute="bottom" constant="31" id="k18-5A-FOk"/>
+                            <constraint firstItem="deT-R0-vkv" firstAttribute="centerX" secondItem="x0B-7S-OpP" secondAttribute="centerX" id="kcc-ED-laB"/>
+                            <constraint firstItem="OJN-kX-DOk" firstAttribute="centerX" secondItem="x0B-7S-OpP" secondAttribute="centerX" id="lv7-Xt-uQX"/>
+                            <constraint firstItem="OJN-kX-DOk" firstAttribute="top" secondItem="n2l-Sq-7T1" secondAttribute="bottom" constant="29" id="pd6-AY-IWg"/>
+                            <constraint firstItem="n2l-Sq-7T1" firstAttribute="centerX" secondItem="x0B-7S-OpP" secondAttribute="centerX" id="yhC-Zw-QdP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pd6-AY-IWg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="YummyFoodImg" destination="cT5-lr-1fA" id="NF2-Cy-v7K"/>
+                        <outlet property="YummyPlace" destination="ZvX-l5-8Fj" id="sK7-TQ-r71"/>
+                        <outlet property="YummyReview" destination="eu2-yO-ylO" id="ssu-OO-Wbp"/>
+                        <outlet property="YummyTitle" destination="Abu-5k-2Z3" id="LCj-aP-Jbl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2TS-da-aTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509" y="-391"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rqI-kt-TaR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8U3-Fk-rtq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="VJC-FB-opv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fSB-Lw-mbL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJf-eG-c1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="251" y="-391"/>
         </scene>
     </scenes>
 </document>
