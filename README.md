@@ -1,4 +1,5 @@
 # iOS-Yummy-Desserts
 
-![desserts](https://cloud.githubusercontent.com/assets/11006814/18230509/f5251b04-72cf-11e6-9761-d52bbf81a42d.jpg)
+![desserts](https://cloud.githubusercontent.com/assets/11006814/18235117/5355bafc-7349-11e6-902e-b2c7e22f77a2.jpg)
+
 
